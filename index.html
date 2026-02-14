@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For MY LOVE 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    background:radial-gradient(circle at top,#ffd1dc,#ff9a9e);
+    min-height:100vh;
+    overflow-x:hidden;
+    text-align:center;
+}
+
+/* BACKGROUND FLOATING HEARTS */
+.bg-heart{
+    position:fixed;
+    font-size:18px;
+    opacity:0.3;
+    animation:bgFloat 10s linear infinite;
+}
+@keyframes bgFloat{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-120vh);}
+}
+
+/* ENVELOPE CONTAINER */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* ENVELOPE */
+.envelope{
+    width:240px;
+    height:150px;
+    background:linear-gradient(145deg,#ff7a9c,#ff4f7b);
+    position:relative;
+    cursor:pointer;
+    border-radius:14px;
+    box-shadow:0 25px 45px rgba(0,0,0,0.25);
+    animation:pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.03);}
+}
+.flap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#ff3f6d;
+    clip-path:polygon(0 0,100% 0,50% 60%);
+    transform-origin:top;
+    transition:transform 0.8s ease;
+}
+.envelope.open .flap{transform:rotateX(180deg);}
+.seal{
+    position:absolute;
+    bottom:50px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:30px;
+}
+.envelope span{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    color:white;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* BIG HEARTS */
+.heart{
+    position:fixed;
+    font-size:70px;
+    animation:bounceFloat 4s ease-out forwards;
+    filter:drop-shadow(0 0 15px #ff4f7b);
+}
+@keyframes bounceFloat{
+    0%{transform:translateY(30px) scale(0);}
+    25%{transform:translateY(-150px) scale(1.2);}
+    45%{transform:translateY(-110px) scale(1);}
+    100%{
+        transform:translate(var(--x),var(--y)) scale(1.4);
+        opacity:0;
+    }
+}
+
+/* LETTER */
+.letter{
+    display:none;
+    background:white;
+    max-width:750px;
+    margin:40px auto;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+.photo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:#ffd1dc;
+    margin:0 auto 20px;
+    background-size:cover;
+}
+.photo img {
+    width: 150px;        /* size of the circle */
+    height: 150px;
+    border-radius: 50%;  /* makes it circular */
+    object-fit: cover;   /* makes the image fill the circle, cropping if needed */
+    display: block;
+    margin: 0 auto 20px;
+}
+.letter p{color:#555;line-height:1.8}
+
+/* QUIZ */
+.quiz{margin-top:40px;}
+.question{margin-bottom:25px;}
+.question button{
+    display:block;
+    width:80%;
+    margin:10px auto;
+    padding:12px;
+    border:none;
+    border-radius:20px;
+    background:#ff9a9e;
+    color:white;
+    cursor:pointer;
+}
+
+/* GIFT */
+.gift{display:none;font-size:65px;cursor:pointer;margin:20px 0}
+
+/* TEDDY */
+.teddy{
+    display:none;
+    font-size:90px;
+    animation:walkIn 2s ease forwards, jump 1s ease 2s;
+}
+@keyframes walkIn{
+    from{transform:translateX(-300px);}
+    to{transform:translateX(0);}
+}
+@keyframes jump{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-40px);}
+}
+.teddy p{color:#ff4f7b;font-weight:600;font-size:20px}
+
+/* WISH */
+.wish{
+    margin-top:40px;
+    font-size:26px;
+    color:#ff4f7b;
+    font-weight:700;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND HEARTS -->
+<script>
+for(let i=0;i<25;i++){
+    let h=document.createElement('div');
+    h.className='bg-heart';
+    h.innerHTML='💗';
+    h.style.left=Math.random()*100+'vw';
+    h.style.animationDuration=(8+Math.random()*10)+'s';
+    document.body.appendChild(h);
+}
+</script>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <div class="seal">💖</div>
+        <span>Open Me</span>
+    </div>
+</div>
+
+<!-- LETTER -->
+<div class="letter" id="letter">
+<div class="photo"> <img src="C:\Users\DC\OneDrive\Desktop\my photo.jpeg" alt="My Photo"></div>
+
+<p>
+Every time I see this picture of you, my heart skips a beat.( kun kay meri fav picture hai naaa ..)<br>
+ Your eyes… I get lost in them every single time specially in sunlight ufffff.... They show so much feeling,(choti choti ankhein or yehi meri sari dunia haii) 
+ I could look at them forever. 💕<br>
+ Your lips… soft, full… I can’t stop thinking about them ( mera fav feature). And your dimples… little surprises that make your smile even more beautiful( as you know i like your smile ).
+ <br>
+ I know you love black. But I Like you in white, and white makes you completely mine in my eyes.
+ I love how you look ,how you carry yourself and how you care about yourself.( your muscles..)<br>
+ Most importantly I love glasse on you, how glasses suit you and how It makes you attractive. I can’t stop thinking about them. ( but tum mery ho or kisi ko attractive nhi lagna achaa
+ ,as you know mein bht possesive hun.... samjh a rahi na) <br>
+ Everything about you makes me fall for you more. Your curls, your eyes, your lips, your dimples, your body, your style… everything. You’re my favorite view, my favorite thought, my favorite everything. 
+ And every time I see you like this, my heart whispers: I love you more than words can ever say. ❤️
+</p>
+
+<div class="quiz">
+<div class="question">
+<h3>💞 Do you love me?</h3>
+<button onclick="answer(true)">yes </button>
+<button onclick="answer(false)">no</button>
+<button onclick="answer(false)">maybe</button>
+</div>
+</div>
+
+<div class="gift" id="gift" onclick="openGift()">🎁</div>
+
+<div class="teddy" id="teddy">
+🧸
+<p>💖 I Love You Too 💖</p>
+</div>
+
+<div class="wish">
+Happy Valentine’s Day 💘<br>
+I love you so much. I want to be a part of every single moment of your life .Thank you for choosing me, loving me,and walking with me not in front not behind but beside,
+Happy valentine day , my forever partner (inshaAllah).You are the greatest chapter in my  story and the most beautiful home in my heart. I love you today , tomorrow and always.
+No matter how many tears or laughter life brings I will be with you always.The first valentine with you isn`t just a celebration but a reminder that i get to walk the rest of it with you.
+It means so much more than just a special day it reminds me of the love we share , the memories we built ,and the emotions we lived together ,we cried, we laughed,we argued,we understood,we 
+forgave and even after all this we are still together and this makes our bond precious.Thank you for loving me the way you do not prefectly,but truly with honesty ,with emotion and 
+with the heart that cares .love youu meri jaan 💖
+You are my forever 💗
+Happy Valentine`s Day again.....❤️
+</div>
+</div>
+
+<script>
+let answers=[];
+
+function openEnvelope(){
+    const env=document.querySelector('.envelope');
+    env.classList.add('open');
+
+    const rect=env.getBoundingClientRect();
+    let start=Date.now();
+
+    let pop=setInterval(()=>{
+        let heart=document.createElement('div');
+        heart.className='heart';
+        heart.innerHTML='❤️';
+        heart.style.left=(rect.left+rect.width/2)+'px';
+        heart.style.top=(rect.top+30)+'px';
+        heart.style.setProperty('--x',(Math.random()*window.innerWidth-window.innerWidth/2)+'px');
+        heart.style.setProperty('--y',(-Math.random()*window.innerHeight)+'px');
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),4000);
+
+        if(Date.now()-start>4000){
+            clearInterval(pop);
+            document.querySelector('.hero').style.display='none';
+            document.getElementById('letter').style.display='block';
+        }
+    },250);
+}
+
+function answer(correct){
+    answers.push(correct);
+    if(correct) document.getElementById('gift').style.display='block';
+}
+
+function openGift(){
+    document.getElementById('gift').style.display='none';
+    document.getElementById('teddy').style.display='block';
+}
+</script>
+
+</body>
+</html>
